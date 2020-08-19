@@ -1,0 +1,17 @@
+version: '3'
+services:
+  hygiene:
+    container_name: hygiene
+    image: tetherlessworld/ontology-publisher:v0.2.0
+    environment:
+      - ONTPUB_FAMILY=${ONTPUB_FAMILY:-ontology-hygiene-tests}
+      - ONTPUB_SPEC_HOST=spec.edmcouncil.org
+      - ONTPUB_IS_DARK_MODE=1
+      - LC_ALL=en_US.UTF-8
+      - LANG=en_US.UTF-8
+      - LANGUAGE=en_US.UTF-8
+      - HYGIENE_TEST_SUBDIR=.hygiene/tests
+      - ONTPUB_SUBDIR=/ontology
+      - ONTPUB_EXCLUDED=/archived
+      - WORKSPACE
+    command: tail -f /dev/null
