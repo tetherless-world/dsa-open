@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker cp . hygiene:/input/ontology-hygiene-tests
+docker cp . hygiene:/input/dsa-open
